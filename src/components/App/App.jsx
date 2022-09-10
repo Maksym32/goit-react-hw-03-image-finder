@@ -40,7 +40,6 @@ export class App extends Component {
     fetchData(query, page, perPage)
       .then(({ hits, totalHits }) => {
         const totalPages = Math.ceil(totalHits / perPage);
-
         if (hits.length === 0) {
           return toast.error('Sorry, no images found. Please, try again!');
         }
